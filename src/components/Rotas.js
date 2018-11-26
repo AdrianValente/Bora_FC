@@ -1,44 +1,23 @@
+
 import React from "react";
-import { Router, Route, Link } from "react-router-native";
+import { Switch, Route } from 'react-router-dom'
 
-function Rotas () {
-  return (
-    <Router>
-      <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-        </ul>
+import Home from "../views/Home";
+import User from "../views/User";
+import Home from "../views/Group";
+import Login from "../views/Login";
 
-        <hr />
-
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-
-      </div>
-    </Router>
-  );
-}
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}
-
+const Rotas = () => (
+  <main>
+    <Container>
+      <Switch>
+        <Route exact path='/' component={Home}/>
+        <Route path='/usuario' component={User}/>
+        <Route path='/grupo' component={Group}/>
+        <Route path='/login' component={Login}/>
+      </Switch>
+    </Container>
+  </main>  
+);
 
 export default Rotas;

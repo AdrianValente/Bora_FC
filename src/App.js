@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { NavLink } from 'react-router-dom'
 
 class App extends Component {
   render() {
@@ -9,13 +10,14 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code>  criação Adrian.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-          </a>
+   
+          <ul>
+            <li><NavLink to="/login">Login</NavLink></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/usuario">Usuário</NavLink></li>
+            <li><NavLink to="/grupo">Grupo</NavLink></li>
+          </ul>
+
         </header>
       </div>
     );

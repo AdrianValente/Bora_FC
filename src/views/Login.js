@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class PagUser extends Component {
+class PagHome extends Component {
   render() {
     return (
       <div>
-          Usuário
+          Login
       </div>
     );
   }
 }
 
-export default PagUser;
+export default PagHome;
