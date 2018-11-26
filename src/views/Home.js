@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PagHome extends Component {
+class Home extends Component {
   render() {
     return (
       <div>
@@ -10,4 +10,4 @@ class PagHome extends Component {
   }
 }
 
-export default PagHome;
+export default Home;
