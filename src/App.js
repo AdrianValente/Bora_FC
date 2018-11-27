@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import Header from './components/Header/Header'
+import MavBar from './components/NavBar/NavBar'
 import Main from './Main'
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Header />
+        <MavBar />
         <Main />
       </div>
     );

@@ -9,7 +9,6 @@ import Login from "./views/Login";
 import User from "./views/User";
 
 const Main = () => (
-    <main>
       <Container>
         <Switch>
           <Route exact path='/' component={Home}/>
@@ -18,7 +17,6 @@ const Main = () => (
           <Route path='/grupo' component={Group}/>
         </Switch>
       </Container>
-    </main>  
-  );
+ );
   
   export default Main;
