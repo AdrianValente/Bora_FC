@@ -10,6 +10,7 @@ import Icon from '@material-ui/core/Icon';
 import Header from '../components/Header/Header';
 import Avatar from '../components/Avatar';
 import ListInfoUser from '../components/ListInfoUser';
+import ImageAvatarsGroups from '../components/AvatarGroup';
 
 const styles = theme => ({
   container: {
@@ -62,6 +63,25 @@ function Home(props) {
           <ListInfoUser />
         </Paper>
     </div>
+
+    <div className={`${classes.container}`}>
+        <div style={{ gridColumnEnd: 'span 3' }}>
+          <ImageAvatarsGroups />
+        </div>
+        <div style={{ gridColumnEnd: 'span 3', }} className="alignGridUser" >
+          <ImageAvatarsGroups />
+        </div>
+        <div style={{ gridColumnEnd: 'span 3' }} className="alignGridUser">
+          <ImageAvatarsGroups />
+        </div>
+        <div style={{ gridColumnEnd: 'span 3' }} className="alignGridUser">
+          <ImageAvatarsGroups />
+        </div>
+        <div style={{ gridColumnEnd: 'span 3' }} className="alignGridUser">
+          <ImageAvatarsGroups />
+        </div>
+      </div>
+
     </div>
   );
 }

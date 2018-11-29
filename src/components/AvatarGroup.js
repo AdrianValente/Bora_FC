@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 
-import imgAvatarGroup from '../img/user_default.jpg';
+import imgAvatarGroup from '../img/group_default.jpg';
 
 const styles = {
   avatar: {
@@ -15,19 +15,24 @@ const styles = {
     width: 150,
     height: 150,
   },
+  GroupAvatarHome: {
+    margin: 10,
+    width: 67,
+    height: 67,
+  },
 };
 
-function ImageAvatarsGroups(props) {
+function ImageAvatars(props) {
   const { classes } = props;
   return (
     <Grid container justify="center" alignItems="center">
-      <Avatar alt="Grupo" src={imgAvatarGroup} className={classes.bigAvatar} />
+      <Avatar alt="Usuário" src={imgAvatarGroup} className={classes.GroupAvatarHome} />
     </Grid>
   );
 }
 
-ImageAvatarsGroups.propTypes = {
+ImageAvatars.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ImageAvatarsGroups);
+export default withStyles(styles)(ImageAvatars);
