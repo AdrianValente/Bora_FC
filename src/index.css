@@ -12,3 +12,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.alignGridUser {
+  text-align: center;
+  direction: column;
+  justify: center;
+  align-items: center;
+}
+
+.bgContainerUser {
+  background-image: al ;
+  background-color: darkcyan;
+
+}

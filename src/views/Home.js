@@ -5,8 +5,11 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
+import Icon from '@material-ui/core/Icon';
 
 import Header from '../components/Header/Header';
+import Avatar from '../components/Avatar';
+import ListInfoUser from '../components/ListInfoUser';
 
 const styles = theme => ({
   container: {
@@ -20,42 +23,51 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
     whiteSpace: 'nowrap',
   },
-
 });
 
-function CSSGrid(props) {
+function Home(props) {
   const { classes } = props;
 
   return (
     <div>
       <Header />
 
-      <div className={classes.container}>
+      <div className={`bgContainerUser ${classes.container}`} >
         <div style={{ gridColumnEnd: 'span 12' }}>
-          <Paper className={classes.paper}>xs=12</Paper>
+            <Avatar nome={'Usuário 01'} imgAvatar={'../img/user_default.jpg'} />
         </div>
-        <div style={{ gridColumnEnd: 'span 12' }}>
-          <Paper className={classes.paper}>xs=12</Paper>
+        <div style={{ gridColumnEnd: 'span 12', }} className="alignGridUser" >
+            Nome Usuário ID:#123456 <br/>
+            email@usuario.com <br/>
+            Posição em Campo
         </div>
-        <div style={{ gridColumnEnd: 'span 12' }}>
-          <Paper className={classes.paper}>xs=12</Paper>
+        <div style={{ gridColumnEnd: 'span 4' }} className="alignGridUser">
+          <Icon className={classes.icon}>games</Icon> <br/>
+          Total de Jogos <br/>
+          XX
         </div>
-        <div style={{ gridColumnEnd: 'span 4' }}>
-          <Paper className={classes.paper}>xs=4</Paper>
+        <div style={{ gridColumnEnd: 'span 4' }} className="alignGridUser">
+          <Icon className={classes.icon}>sentiment_very_satisfied</Icon> <br/>
+          Partidas Vencidas <br/>
+          XX
         </div>
-        <div style={{ gridColumnEnd: 'span 4' }}>
-          <Paper className={classes.paper}>xs=4</Paper>
-        </div>
-        <div style={{ gridColumnEnd: 'span 4' }}>
-          <Paper className={classes.paper}>xs=4</Paper>
+        <div style={{ gridColumnEnd: 'span 4' }} className="alignGridUser">
+          <Icon className={classes.icon}>grade</Icon> <br/>
+          Total de Gols <br/>
+          XX
         </div>
       </div>
+      <div style={{ gridColumnEnd: 'span 12' }}>
+        <Paper className={classes.paper}>
+          <ListInfoUser />
+        </Paper>
+    </div>
     </div>
   );
 }
 
-CSSGrid.propTypes = {
+Home.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(CSSGrid);
+export default withStyles(styles)(Home);
