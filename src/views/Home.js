@@ -7,10 +7,13 @@ import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
 
+
 import Header from '../components/Header/Header';
 import Avatar from '../components/Avatar';
 import ListInfoUser from '../components/ListInfoUser';
 import ImageAvatarsGroups from '../components/AvatarGroup';
+
+import imgUrl from '../img/bg_user_1.jpg';
 
 const styles = theme => ({
   container: {
@@ -24,6 +27,12 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
     whiteSpace: 'nowrap',
   },
+  bgContainerUser: {
+    backgroundImage: 'url(' + imgUrl + ')',
+    backgroundRepeat  : 'repeat-x',
+    backgroundPosition: 'center',
+  },
+
 });
 
 function Home(props) {
@@ -33,7 +42,7 @@ function Home(props) {
     <div>
       <Header />
 
-      <div className={`bgContainerUser ${classes.container}`} >
+      <div className={`bgContainerUser ${classes.bgContainerUser} ${classes.container}`} >
         <div style={{ gridColumnEnd: 'span 12' }}>
             <Avatar nome={'Usuário 01'} imgAvatar={'../img/user_default.jpg'} />
         </div>
