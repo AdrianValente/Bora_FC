@@ -4,7 +4,6 @@ import './style.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
-
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
@@ -19,7 +18,7 @@ const theme = createMuiTheme({
 });
 
 ReactDOM.render((
-    <BrowserRouter basename={'my-app'}>
+    <BrowserRouter basename={'Bora_FC'}>
       <MuiThemeProvider theme={theme}>
         <App />
       </MuiThemeProvider>

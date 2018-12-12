@@ -6,6 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+  background-image: url(./img/bg_app.jpg);
 }
 
 code {
@@ -54,9 +56,4 @@ code {
 }
 
 .bgContainerUser {
-  color: #ffffff;
-}
-
-body {
-  background-color: grey;
 }
