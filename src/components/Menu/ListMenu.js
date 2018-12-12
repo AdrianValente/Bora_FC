@@ -1,65 +1,88 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import MoreVertIcon from '@material-ui/icons/Menu';
-import { Navbar, NavItem, Row} from 'react-materialize';
 
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import MailIcon from '@material-ui/icons/Mail';
+import Menu from '@material-ui/icons/Menu';
 
-const ITEM_HEIGHT = 48;
+const styles = theme =>  ({
+  list: {
+    width: 270,
+  },
+  fullList: {
+    width: 'auto',
+  },
+  root: {
+    color: theme.palette.text.primary,
+  },
+  icon: {
+    color: '#fff',
+    fontSize: 30,
+    margin: '5',
+  },
+});
 
-class LongMenu extends React.Component {
+class TemporaryDrawer extends React.Component {
   state = {
-    anchorEl: null,
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
   };
 
-  handleClick = event => {
-    this.setState({ anchorEl: event.currentTarget });
-  };
-
-  handleClose = () => {
-    this.setState({ anchorEl: null });
+  toggleDrawer = (side, open) => () => {
+    this.setState({
+      [side]: open,
+    });
   };
 
   render() {
-    const { anchorEl } = this.state;
-    const open = Boolean(anchorEl);
+    const { classes } = this.props;
+
+    const sideList = (
+      <div className={classes.list}>
+        <List>
+          {['Home', 'Login', 'Usuário', 'Grupos'].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
+        </List>
+      </div>
+    );
 
     return (
       <div>
-        <IconButton
-          color="inherit"
-          aria-label="More"
-          aria-owns={open ? 'long-menu' : undefined}
-          aria-haspopup="true"
-          onClick={this.handleClick}
-        >
-          <MoreVertIcon />
+        <IconButton onClick={this.toggleDrawer('left', true)}>
+          <Menu className={classes.icon} />
         </IconButton>
 
-        <Menu
-          id="long-menu"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={this.handleClose}
-          PaperProps={{
-            style: {
-              maxHeight: ITEM_HEIGHT * 4.5,
-              width: 200,
-            },
-          }}
-        >
-          <MenuItem href='/'> Home </MenuItem>
-          <MenuItem href='/login'> Login </MenuItem>
-          <MenuItem href='/usuario'> Usuário </MenuItem>
-          <MenuItem href='/grupo'> Grupo </MenuItem>
-
-        </Menu>
-
+        <Drawer open={this.state.left} onClose={this.toggleDrawer('left', false)}>
+          <div
+            tabIndex={0}
+            role="button"
+            onClick={this.toggleDrawer('left', false)}
+            onKeyDown={this.toggleDrawer('left', false)}
+          >
+            {sideList}
+          </div>
+        </Drawer>
       </div>
     );
   }
 }
 
-export default LongMenu;
+TemporaryDrawer.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(TemporaryDrawer);

@@ -102,7 +102,7 @@ const styles = theme => ({
             <Toolbar>
               <AccountCircle />
               <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-                My App
+                Bora FC
               </Typography>
               <div className={classes.grow} />
               <div >
