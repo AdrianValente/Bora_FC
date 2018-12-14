@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 
 import AboutUser from '../views/User/AboutUser';
+import ListBoard from '../views/User/ListBoard';
 
 
 function TabContainer(props) {
@@ -52,7 +53,9 @@ class TabUser extends React.Component {
         {value === 0 && <TabContainer>
           <AboutUser />
         </TabContainer>}
-        {value === 1 && <TabContainer>Item Two Quadro de Avisos</TabContainer>}
+        {value === 1 && <TabContainer>
+          <ListBoard />
+        </TabContainer>}
         {value === 2 && <TabContainer>Item Three Jogos</TabContainer>}
       </div>
     );

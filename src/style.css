@@ -57,3 +57,26 @@ code {
 
 .bgContainerUser {
 }
+
+.chip {
+  background-color: #909090 !important;
+  color: #ffffff !important;
+  font-size: 10px !important;
+  padding: 1px !important;
+  height: 20px !important;
+  margin: 6px;
+}
+
+.chip span {
+  padding: 0 15px !important;
+}
+
+.dateWarp {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.avatar {
+  margin: 10,
+}
