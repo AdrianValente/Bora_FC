@@ -7,8 +7,10 @@ import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
+import Button from '@material-ui/core/Button';
 
 import Avatar from '../../components/Avatar';
+import EditBtnUser from '../../components/BtnEditUser';
 
 import ListInfoUser from '../../components/ListInfoUser';
 import ImageAvatarsGroups from '../../components/AvatarGroup';
@@ -16,6 +18,9 @@ import ImageAvatarsGroups from '../../components/AvatarGroup';
 import imgUrl from '../../img/bg_user_1.jpg';
 
 const styles = theme => ({
+  button: {
+    margin: theme.spacing.unit,
+  },
   container: {
     display: 'grid',
     gridTemplateColumns: 'repeat(12, 1fr)',
@@ -31,6 +36,7 @@ const styles = theme => ({
     backgroundImage: 'url(' + imgUrl + ')',
     backgroundRepeat  : 'repeat-x',
     backgroundPosition: 'center',
+    color: '#ffffff',
   },
 
 });
@@ -42,6 +48,9 @@ function AboutUser(props) {
     <div>
 
       <div className={`bgContainerUser ${classes.bgContainerUser} ${classes.container}`} >
+        <div className="edit_position_btn">
+          <EditBtnUser />
+        </div>
         <div style={{ gridColumnEnd: 'span 12' }}>
             <Avatar nome={'Usuário 01'} imgAvatar={'../img/user_default.jpg'} />
         </div>

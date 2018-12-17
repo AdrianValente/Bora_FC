@@ -80,3 +80,55 @@ code {
 .avatar {
   margin: 10,
 }
+
+.border_painel_default {
+  border: 1px solid #909090;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.painel_status {
+  height: 55px; 
+  width: 55px;
+  margin: 2px;
+  padding: 4px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.img_painel_especial_status img, .img_painel_especial_status {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+}
+
+.title_painel_special_status {
+  font-size: 10px;
+  text-align: center;
+  font-weight: bold;
+  height: 15px;
+  position: relative;
+  top: -2px;
+}
+
+.position_Game_play {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  height: 30px;
+  position: relative;
+  top: 3px;
+}
+
+.warpConteinerStatus {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
