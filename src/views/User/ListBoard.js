@@ -8,7 +8,7 @@ import NoticeItem from '../../components/ListBoard/NoticeItem';
 import GameItem from '../../components/ListBoard/GameItem';
 
 const ListBoard = () => (
-    <div>
+    <div className="containe_games" >
         <GameItem />
         <DateSepareteItem date={'Dezembro 2018'} />
 

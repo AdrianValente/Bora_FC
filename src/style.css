@@ -55,6 +55,10 @@ code {
   align-items: center;
 }
 
+.alignGridGroup {
+  direction: column;
+}
+
 .bgContainerUser {
 }
 
@@ -131,4 +135,8 @@ code {
   flex-wrap: nowrap;
   justify-content: flex-end;
   align-items: center;
+}
+
+.containe_games {
+  margin: 5px 5px 75px 5px;
 }

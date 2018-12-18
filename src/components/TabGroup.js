@@ -6,6 +6,9 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 
+import ListPlayer from '../views/Group/ListPlayers';
+import ListGames from '../views/Group/ListGames';
+
 function TabContainer(props) {
   return (
     <Typography component="div" >
@@ -24,7 +27,7 @@ const styles = theme => ({
   },
 });
 
-class TabsGroup extends React.Component {
+class TabGroup extends React.Component {
   state = {
     value: 0,
   };
@@ -41,19 +44,23 @@ class TabsGroup extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Tabs fullWidth value={value} onChange={this.handleChange}>
-            <Tab label="Lista de Participantes" />
-            <Tab label="Jogos Realizados" />
+            <Tab label="Participantes" />
+            <Tab label="Jogos" />
           </Tabs>
         </AppBar>
-        {value === 0 && <TabContainer>Item One Lista de Participantes</TabContainer>}
-        {value === 1 && <TabContainer>Item Two Jogos Realizados</TabContainer>}
+        {value === 0 && <TabContainer>
+          <ListPlayer />
+        </TabContainer>}
+        {value === 1 && <TabContainer>
+          <ListGames />
+        </TabContainer>}
       </div>
     );
   }
 }
 
-TabsGroup.propTypes = {
+TabGroup.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TabsGroup);
+export default withStyles(styles)(TabGroup);

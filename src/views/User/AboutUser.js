@@ -12,7 +12,9 @@ import Button from '@material-ui/core/Button';
 import Avatar from '../../components/Avatar';
 import EditBtnUser from '../../components/BtnEditUser';
 
-import ListInfoUser from '../../components/ListInfoUser';
+import StatisticUser from './StatisticUser';
+import AddGroup from './AddGroup';
+
 import ImageAvatarsGroups from '../../components/AvatarGroup';
 
 import imgUrl from '../../img/bg_user_1.jpg';
@@ -25,6 +27,19 @@ const styles = theme => ({
     display: 'grid',
     gridTemplateColumns: 'repeat(12, 1fr)',
     gridGap: `${theme.spacing.unit * 1}px`,
+  },
+  containerGroup: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridGap: `${theme.spacing.unit * 1}px`,
+    marginBottom: 80,
+    marginTop: 15,
+  },
+  containerStatistica: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(12, 1fr)',
+    gridGap: `${theme.spacing.unit * 1}px`,
+    whidth: '100%',
   },
   paper: {
     padding: theme.spacing.unit,
@@ -75,30 +90,14 @@ function AboutUser(props) {
           XX
         </div>
       </div>
-      <div style={{ gridColumnEnd: 'span 12' }}>
-        <Paper className={classes.paper}>
-          <ListInfoUser />
+        
+      <div className={classes.containerStatistica}>
+        <Paper className={classes.paper} style={{ gridColumnEnd: 'span 12' }}>
+          <StatisticUser />
         </Paper>
-    </div>
-
-    <div className={`${classes.container}`}>
-        <div style={{ gridColumnEnd: 'span 3' }}>
-          <ImageAvatarsGroups />
-        </div>
-        <div style={{ gridColumnEnd: 'span 3', }} className="alignGridUser" >
-          <ImageAvatarsGroups />
-        </div>
-        <div style={{ gridColumnEnd: 'span 3' }} className="alignGridUser">
-          <ImageAvatarsGroups />
-        </div>
-        <div style={{ gridColumnEnd: 'span 3' }} className="alignGridUser">
-          <ImageAvatarsGroups />
-        </div>
-        <div style={{ gridColumnEnd: 'span 3' }} className="alignGridUser">
-          <ImageAvatarsGroups />
-        </div>
       </div>
 
+      <AddGroup />
     </div>
   );
 }

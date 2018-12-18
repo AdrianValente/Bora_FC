@@ -71,12 +71,14 @@ function GameStatus(props) {
                 Data: <b>{data}</b><br/>
                 Local: <b>{local}</b>
               </Grid>
-              <Grid item xs={4} className="warpConteinerStatus" >
-                <GolsNumber />
-                <ItemPosicionGame />
+              <Grid item xs={4} className="warpConteinerStatus" >          
+                <SpotlightPlayer /> 
                 <ItemCardStatus />
-                <ItemPainelStatusSpecial />  
-                <SpotlightPlayer />              
+
+                <ItemPosicionGame /> 
+                <GolsNumber />               
+
+                <ItemPainelStatusSpecial />               
               </Grid>
             </Grid>
 

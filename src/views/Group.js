@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+
 import NavBar from '../components/NavBar/NavBar'
 import Header from '../components/Header/Header';
+import AboutGroup from './Group/AboutGroup';
+import TabGroup from '../components/TabGroup';
 
 class PagGroup extends Component {
   render() {
@@ -9,21 +12,8 @@ class PagGroup extends Component {
           <NavBar />
           <Header />
          
-         <header>
-          <div>
-            <img></img>
-            Nome Grupo Id Grupo
-            XX Jogos Realizados
-            <button></button>
-            <button></button>
-            <button></button>
-          </div>
-              Infomrações do Grupo
-         </header>
-
-         <div>
-           aba funçoes do grupo
-         </div>
+          <AboutGroup />
+          <TabGroup />
 
       </div>
     );

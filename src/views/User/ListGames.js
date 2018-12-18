@@ -5,7 +5,7 @@ import DateSepareteItem from '../../components/DateSepareteItem';
 import GameStatus from '../../components/ListBoard/GameStatus';
 
 const ListBoard = () => (
-    <div>
+    <div className="containe_games" >
         <GameStatus />
         <DateSepareteItem date={'Dezembro 2018'} />
 
