@@ -64,21 +64,16 @@ function UserPlay(props) {
 
             <Grid container wrap="nowrap" spacing={0}>
               <Grid item xs={2}>
-                <Avatar className={classes.avatar} src={urlImagem} />
+                Data: <br/><b>{data}</b>
               </Grid>
-              <Grid item xs={6} className={classes.formatarCampos}>
-                Grupo: <b>{grupo}</b><br/>
-                Data: <b>{data}</b><br/>
-                Local: <b>{local}</b>
-              </Grid>
-              <Grid item xs={4} className="warpConteinerStatus" >          
+              
+              <Grid item xs={6} className="warpConteinerStatus" >          
                 <SpotlightPlayer /> 
-                <ItemCardStatus />
-
-                <ItemPosicionGame /> 
-                <GolsNumber />               
-
-                <ItemPainelStatusSpecial />               
+                             
+              </Grid>
+              <Grid item xs={4} className={classes.formatarCampos}>
+                Avaliação Geral do Jogo:
+                <br/>estrelinhas
               </Grid>
             </Grid>
 

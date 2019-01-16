@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-import UserOfGroup from '../../components/ListBoard/UserOfGroup';
+import UserPlay from '../../components/ListBoard/UserPlay';
 import GroupInformation from '../../components/GroupInformation';
 
 const styles = theme => ({
@@ -32,23 +32,9 @@ function ListGames(props) {
         </Grid>
 
         <Grid item xs={12}>
-          <UserOfGroup />
+          <UserPlay  quantidadetotal={'20/07/2019'} />
         </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
+        
       </Grid>
     </div>
   );
