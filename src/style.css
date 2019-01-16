@@ -140,3 +140,11 @@ code {
 .containe_games {
   margin: 5px 5px 75px 5px;
 }
+
+.display_invisivel {
+  display: none;
+}
+
+.cancelado .cancelado, .realizado .realizado, .fim .fim {
+  display: inherit;
+}

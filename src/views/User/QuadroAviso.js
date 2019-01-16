@@ -1,25 +1,26 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid';
 
-import DateSepareteItem from '../../components/DateSepareteItem';
-import GetOutItem from '../../components/ListBoard/GetOutItem';
-import AvaliableItem from '../../components/ListBoard/AvaliableItem';
-import NoticeItem from '../../components/ListBoard/NoticeItem';
-import GameItem from '../../components/ListBoard/GameItem';
+import SeparadorItemData from '../../components/SeparadorItemData';
+import SairGrupo from '../../components/QuadroAviso/SairGrupo';
+import AvaliarJogo from '../../components/QuadroAviso/AvaliarJogo';
+import InformacaoJogo from '../../components/QuadroAviso/InformacaoJogo';
+import ConfirmacaoJogo from '../../components/QuadroAviso/ConfirmacaoJogo';
 
 const ListBoard = () => (
     <div className="containe_games" >
-        <GameItem />
-        <DateSepareteItem date={'Dezembro 2018'} />
+        <ConfirmacaoJogo grupo={'Grupo do Colégio'} data={'20/01/2018'} hora={'20:00'} local={'Lorem ipsum dolor sit amet.'} />
+        <SeparadorItemData date={'Dezembro 2018'} />
 
-        <NoticeItem />
-        <DateSepareteItem date={'Novembro 2018'} />
+        <InformacaoJogo grupo={'Grupo dos Porteiros'} data={'20/12/2018'} hora={'01:00'} local={'Lorem ipsum dolor sit amet.'} aviso={'fim'} />
+        <SeparadorItemData date={'Novembro 2018'} />
 
-        <NoticeItem />
-        <AvaliableItem />        
-        <DateSepareteItem date={'Outubro 2018'} />
+        <InformacaoJogo grupo={'Grupo dos Porteiros'} data={'20/11/2018'} hora={'01:00'} local={'Lorem ipsum dolor sit amet.'} aviso={'realizado'} />
+        <InformacaoJogo grupo={'Domingão dos Amigos'} data={'12/11/2018'} hora={'19:30'} local={'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'} aviso={'cancelado'} />
+        <AvaliarJogo grupo={'Tabajara Futebol Clube'} data={'9/11/2018'} hora={'15:30'} local={'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'} />        
+        <SeparadorItemData date={'Outubro 2018'} />
         
-        <GetOutItem/>
+        <SairGrupo grupo={'Tabajara Futebol Clube'} />
     </div>
 )
 

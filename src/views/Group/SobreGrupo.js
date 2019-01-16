@@ -10,7 +10,7 @@ import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
 
 import Avatar from '../../components/Avatar';
-import EditBtnUser from '../../components/BtnEditUser';
+import BtnEditarGrupo from '../../components/BtnEditarGrupo';
 
 import imgUrl from '../../img/bg_user_2.jpg';
 
@@ -50,7 +50,7 @@ function AboutGroup(props) {
         <div style={{ gridColumnEnd: 'span 8', }} className="alignGridGroup" >
             Nome do Grupo ID:#123456 <br/>
             35 jogos Realizados <br/>
-            <EditBtnUser />
+            <BtnEditarGrupo />
         </div>
 
        </div>

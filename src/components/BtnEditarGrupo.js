@@ -16,7 +16,7 @@ function Transition(props) {
   return <Slide direction="up" {...props} />;
 }
 
-class BtnEditUser extends React.Component {
+class BtnEditarGrupo extends React.Component {
   state = {
     open: false,
   };
@@ -47,7 +47,7 @@ class BtnEditUser extends React.Component {
           aria-describedby="alert-dialog-slide-description"
         >
           <DialogTitle id="alert-dialog-slide-title">
-            {"Editar Perfil"}
+            {"Editar Informações do Grupo"}
           </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description">
@@ -101,4 +101,4 @@ class BtnEditUser extends React.Component {
   }
 }
 
-export default BtnEditUser;
+export default BtnEditarGrupo;

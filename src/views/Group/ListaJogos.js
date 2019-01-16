@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 import UserPlay from '../../components/ListBoard/UserPlay';
-import GroupInformation from '../../components/GroupInformation';
+import InformacoesGrupo from '../../components/InformacoesGrupo';
 
 const styles = theme => ({
   root: {
@@ -28,7 +28,7 @@ function ListGames(props) {
     <div className={classes.root}>
       <Grid container spacing={16} className={classes.espacamentoContent}>
         <Grid item xs={12}>
-          <GroupInformation quantidadetotal={'21'} jogadorconfirmado={'8'} jogadorhabilitados={'12'} />
+          <InformacoesGrupo quantidadetotal={'21'} jogadorconfirmado={'8'} jogadorhabilitados={'12'} />
         </Grid>
 
         <Grid item xs={12}>
