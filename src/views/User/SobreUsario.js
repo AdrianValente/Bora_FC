@@ -10,11 +10,9 @@ import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
 
 import Avatar from '../../components/Avatar';
-import EditBtnUser from '../../components/BtnEditUser';
-
-import StatisticUser from './StatisticUser';
-import AddGroup from './AddGroup';
-
+import BtnEditarUsuario from '../../components/BtnEditarUsuario';
+import EstatisticasUsuario from './EstatisticasUsuario';
+import GruposParticipa from './GruposParticipa';
 import ImageAvatarsGroups from '../../components/AvatarGroup';
 
 import imgUrl from '../../img/bg_user_1.jpg';
@@ -64,7 +62,7 @@ function AboutUser(props) {
 
       <div className={`bgContainerUser ${classes.bgContainerUser} ${classes.container}`} >
         <div className="edit_position_btn">
-          <EditBtnUser />
+          <BtnEditarUsuario />
         </div>
         <div style={{ gridColumnEnd: 'span 12' }}>
             <Avatar nome={'Usuário 01'} imgAvatar={'../img/user_default.jpg'} />
@@ -93,11 +91,11 @@ function AboutUser(props) {
         
       <div className={classes.containerStatistica}>
         <Paper className={classes.paper} style={{ gridColumnEnd: 'span 12' }}>
-          <StatisticUser />
+          <EstatisticasUsuario />
         </Paper>
       </div>
 
-      <AddGroup />
+      <GruposParticipa />
     </div>
   );
 }

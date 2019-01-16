@@ -6,9 +6,9 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 
-import AboutUser from '../views/User/AboutUser';
-import ListBoard from '../views/User/ListBoard';
-import ListGames from '../views/User/ListGames';
+import SobreUsario from './SobreUsario';
+import QuadroAviso from './QuadroAviso';
+import ListaJogos from './ListaJogos';
 
 
 function TabContainer(props) {
@@ -29,7 +29,7 @@ const styles = theme => ({
   },
 });
 
-class TabUser extends React.Component {
+class AbasUsuario extends React.Component {
   state = {
     value: 0,
   };
@@ -52,21 +52,21 @@ class TabUser extends React.Component {
           </Tabs>
         </AppBar>
         {value === 0 && <TabContainer>
-          <AboutUser />
+          <SobreUsario />
         </TabContainer>}
         {value === 1 && <TabContainer>
-          <ListBoard />
+          <QuadroAviso />
         </TabContainer>}
         {value === 2 && <TabContainer>
-          <ListGames />
+          <ListaJogos />
         </TabContainer>}
       </div>
     );
   }
 }
 
-TabUser.propTypes = {
+AbasUsuario.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(TabUser);
+export default withStyles(styles)(AbasUsuario);

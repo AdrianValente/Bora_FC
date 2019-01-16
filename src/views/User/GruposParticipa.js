@@ -30,7 +30,7 @@ const styles = theme => ({
 
 });
 
-function AddGroup(props) {
+function GruposParticipa(props) {
   const { classes } = props;
 
   return (
@@ -54,8 +54,8 @@ function AddGroup(props) {
   );
 }
 
-AddGroup.propTypes = {
+GruposParticipa.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(AddGroup);
+export default withStyles(styles)(GruposParticipa);

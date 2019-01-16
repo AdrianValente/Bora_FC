@@ -14,7 +14,7 @@ const styles = theme => ({
   },
 });
 
-function SimpleList(props) {
+function EstatisticasUsuario(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
@@ -54,8 +54,8 @@ function SimpleList(props) {
   );
 }
 
-SimpleList.propTypes = {
+EstatisticasUsuario.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(SimpleList);
+export default withStyles(styles)(EstatisticasUsuario);

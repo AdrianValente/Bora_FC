@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header/Header';
 import NavBar from '../components/NavBar/NavBar'
-import TabUser from '../components/TabUser';
+import AbasUsuario from './User/AbasUsuario';
 
 import { withStyles } from '@material-ui/core/styles';
 import imgUrl from '../img/bg_user_1.jpg';
@@ -20,7 +20,7 @@ function User(props) {
     <div className={`bgContainerUser`}  >
       <NavBar />      
       <Header />
-      <TabUser />
+      <AbasUsuario />
     </div>
   );
 }
