@@ -9,7 +9,7 @@ import ConfirmacaoJogo from '../../components/QuadroAviso/ConfirmacaoJogo';
 
 const ListBoard = () => (
     <div className="containe_games" >
-        <ConfirmacaoJogo grupo={'Grupo do Colégio'} data={'20/01/2018'} hora={'20:00'} local={'Lorem ipsum dolor sit amet.'} />
+        <ConfirmacaoJogo grupo={'Grupo do Colégio '} data={'20/01/2018'} hora={'20:00'} local={'Lorem ipsum dolor sit amet.'} />
         <SeparadorItemData date={'Dezembro 2018'} />
 
         <InformacaoJogo grupo={'Grupo dos Porteiros'} data={'20/12/2018'} hora={'01:00'} local={'Lorem ipsum dolor sit amet.'} aviso={'fim'} />
