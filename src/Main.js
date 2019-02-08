@@ -1,20 +1,20 @@
 
 import React from "react";
 import { Container } from 'react-materialize';
-import { Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import PaginaGrupo from "./views/Grupo";
-import PaginaPrincipal from "./views/Principal";
-import Login from "./views/Login";
-import PaginaUsuario from "./views/Usuario";
+import Grupo from "./components/PagGrupo/Grupo";
+import Usuario from "./components/PagUsuario/Usuario";
+import Login from "./components/Login/Login";
+import Home from "./components/Principal";
 
 const Main = () => (
       <Container>
         <Switch>
-          <Route exact path='/' component={PaginaPrincipal}/>
+          <Route exact path='/' component={Home}/>
           <Route path='/login' component={Login}/>
-          <Route path='/usuario' component={PaginaUsuario}/>
-          <Route path='/grupo' component={PaginaGrupo}/>
+          <Route path='/usuario' component={Usuario}/>
+          <Route path='/grupo' component={Grupo}/>
         </Switch>
       </Container>
  );

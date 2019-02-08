@@ -1,10 +1,10 @@
 import React from 'react';
-import Header from '../components/Header/Header';
-import NavBar from '../components/NavBar/NavBar'
-import AbasUsuario from './User/AbasUsuario';
+import Header from '../Header/Header';
+import NavBar from '../NavBar/NavBar'
+import AbasUsuario from './ComponentesUsuario/AbasUsuario';
 
 import { withStyles } from '@material-ui/core/styles';
-import imgUrl from '../img/bg_user_1.jpg';
+import imgUrl from '../../img/bg_user_1.jpg';
 
 const styles = theme => ({
   body: {

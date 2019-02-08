@@ -1,12 +1,14 @@
 import React from 'react';
+import './Style.css';
+
 import PropTypes from 'prop-types';
 import {  withStyles, MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles';
 import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
 import Avatar from '@material-ui/core/Avatar';
 
-import imgUrl from '../img/bg_home.jpg';
-import imgDestaque from '../img/logo_home.png';
+import imgUrl from '../../img/bg_home.jpg';
+import imgDestaque from '../../img/logo_home.png';
 
 import indigo from '@material-ui/core/colors/indigo';
 import red from '@material-ui/core/colors/red';

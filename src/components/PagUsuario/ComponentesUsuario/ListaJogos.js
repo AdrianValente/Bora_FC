@@ -1,8 +1,8 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid';
 
-import SeparadorItemData from '../../components/SeparadorItemData';
-import GameStatus from '../../components/ListBoard/GameStatus';
+import SeparadorItemData from '../../SeparadorItemData';
+import GameStatus from '../../ListBoard/GameStatus';
 
 const ListBoard = () => (
     <div className="containe_games" >

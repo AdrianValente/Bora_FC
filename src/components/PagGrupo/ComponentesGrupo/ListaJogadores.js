@@ -4,8 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-import UserOfGroup from '../../components/ListBoard/UserOfGroup';
-import InformacoesGrupo from '../../components/InformacoesGrupo';
+import UserOfGroup from '../../ListBoard/UserOfGroup';
+import InformacoesGrupo from '../../InformacoesGrupo';
 
 const styles = theme => ({
   root: {

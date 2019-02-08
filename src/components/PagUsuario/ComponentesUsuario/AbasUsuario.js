@@ -46,9 +46,9 @@ class AbasUsuario extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Tabs fullWidth value={value} onChange={this.handleChange}>
-            <Tab label="Perfil do Jogador" />
-            <Tab label="Quadro de Avisos" />
-            <Tab label="Jogos" />
+            <Tab label="Perfil do Jogador" classes="aba" />
+            <Tab label="Quadro de Avisos" classes="" />
+            <Tab label="Jogos" classes="" />
           </Tabs>
         </AppBar>
         {value === 0 && <TabContainer>

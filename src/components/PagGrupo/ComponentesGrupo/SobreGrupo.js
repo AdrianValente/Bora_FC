@@ -9,10 +9,10 @@ import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
 import Button from '@material-ui/core/Button';
 
-import Avatar from '../../components/Avatar';
-import BtnEditarGrupo from '../../components/BtnEditarGrupo';
+import Avatar from '../../Avatar';
+import BtnEditarGrupo from '../../BtnEditarGrupo';
 
-import imgUrl from '../../img/bg_user_2.jpg';
+import imgUrl from '../../../img/bg_user_2.jpg';
 
 const styles = theme => ({
   button: {

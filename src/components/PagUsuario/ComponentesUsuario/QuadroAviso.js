@@ -1,11 +1,11 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid';
 
-import SeparadorItemData from '../../components/SeparadorItemData';
-import SairGrupo from '../../components/QuadroAviso/SairGrupo';
-import AvaliarJogo from '../../components/QuadroAviso/AvaliarJogo';
-import InformacaoJogo from '../../components/QuadroAviso/InformacaoJogo';
-import ConfirmacaoJogo from '../../components/QuadroAviso/ConfirmacaoJogo';
+import SeparadorItemData from '../../SeparadorItemData';
+import SairGrupo from '../../QuadroAviso/SairGrupo';
+import AvaliarJogo from '../../QuadroAviso/AvaliarJogo';
+import InformacaoJogo from '../../QuadroAviso/InformacaoJogo';
+import ConfirmacaoJogo from '../../QuadroAviso/ConfirmacaoJogo';
 
 const ListBoard = () => (
     <div className="containe_games" >

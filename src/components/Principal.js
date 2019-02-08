@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar/NavBar'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 
-import Header from '../components/Header/Header';
+import Header from './Header/Header';
 import imgUrl from '../img/bg_user_1.jpg';
 
 const styles = theme => ({

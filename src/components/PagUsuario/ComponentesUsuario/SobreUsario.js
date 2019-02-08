@@ -2,20 +2,15 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
-import Divider from '@material-ui/core/Divider';
-import Grid from '@material-ui/core/Grid';
 import Icon from '@material-ui/core/Icon';
-import Button from '@material-ui/core/Button';
 
-import Avatar from '../../components/Avatar';
-import BtnEditarUsuario from '../../components/BtnEditarUsuario';
+import BtnEditarUsuario from '../../BtnEditarUsuario';
 import EstatisticasUsuario from './EstatisticasUsuario';
 import GruposParticipa from './GruposParticipa';
-import ImageAvatarsGroups from '../../components/AvatarGroup';
+import Avatar from '../../Avatar';
 
-import imgUrl from '../../img/bg_user_1.jpg';
+import imgUrl from '../../../img/bg_user_1.jpg';
 
 const styles = theme => ({
   button: {
@@ -65,7 +60,7 @@ function AboutUser(props) {
           <BtnEditarUsuario />
         </div>
         <div style={{ gridColumnEnd: 'span 12' }}>
-            <Avatar nome={'Usuário 01'} imgAvatar={'../img/user_default.jpg'} />
+            <Avatar nome={'Usuário 01'} imgAvatar={'../../../img/user_default.jpg'} />
         </div>
         <div style={{ gridColumnEnd: 'span 12', }} className="alignGridUser" >
             Nome Usuário ID:#123456 <br/>
