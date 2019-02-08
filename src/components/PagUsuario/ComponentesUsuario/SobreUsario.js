@@ -40,11 +40,32 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
     whiteSpace: 'nowrap',
   },
+  posicionarAcabamento: {
+    marginTop: '5px',
+    marginBottom: '10px',
+  },
   bgContainerUser: {
     backgroundImage: 'url(' + imgUrl + ')',
     backgroundRepeat  : 'repeat-x',
     backgroundPosition: 'center',
     color: '#ffffff',
+  },
+  editPositionBtn: {
+    top: '35px',
+    float: 'right',
+    position: 'relative',
+    marginRight: '10px',
+    marginTop: '-25px',
+  },
+  resultadoDestaque: {
+    fontSize: '1.6rem',
+    fontWeight: 'bold',
+    lineHeight: '2rem',
+  },
+  destaqueInfoUser: {
+    fontSize: '1rem',
+    lineHeight: '1.4rem',
+    marginBottom: '10px',
   },
 
 });
@@ -56,31 +77,32 @@ function AboutUser(props) {
     <div>
 
       <div className={`bgContainerUser ${classes.bgContainerUser} ${classes.container}`} >
-        <div className="edit_position_btn">
-          <BtnEditarUsuario />
-        </div>
+        
         <div style={{ gridColumnEnd: 'span 12' }}>
-            <Avatar nome={'Usuário 01'} imgAvatar={'../../../img/user_default.jpg'} />
+          <div className={`${classes.editPositionBtn}`} >
+            <BtnEditarUsuario />
+          </div>
+          <Avatar nome={'Usuário 01'} imgAvatar={'../../../img/user_default.jpg'} />
         </div>
-        <div style={{ gridColumnEnd: 'span 12', }} className="alignGridUser" >
-            Nome Usuário ID:#123456 <br/>
+        <div style={{ gridColumnEnd: 'span 12', }}  className={`alignGridUser ${classes.destaqueInfoUser}`} >
+            Adrian Valente - ID:#123456 <br/>
             email@usuario.com <br/>
-            Posição em Campo
+            Centro Avante
         </div>
-        <div style={{ gridColumnEnd: 'span 4' }} className="alignGridUser">
+        <div style={{ gridColumnEnd: 'span 4' }} className={`alignGridUser ${classes.posicionarAcabamento}`} >
           <Icon className={classes.icon}>games</Icon> <br/>
           Total de Jogos <br/>
-          XX
+          <span className={classes.resultadoDestaque} >518</span>
         </div>
-        <div style={{ gridColumnEnd: 'span 4' }} className="alignGridUser">
+        <div style={{ gridColumnEnd: 'span 4' }} className={`alignGridUser ${classes.posicionarAcabamento}`}>
           <Icon className={classes.icon}>sentiment_very_satisfied</Icon> <br/>
           Partidas Vencidas <br/>
-          XX
+          <span className={classes.resultadoDestaque} >179</span>
         </div>
-        <div style={{ gridColumnEnd: 'span 4' }} className="alignGridUser">
+        <div style={{ gridColumnEnd: 'span 4' }} className={`alignGridUser ${classes.posicionarAcabamento}`}>
           <Icon className={classes.icon}>grade</Icon> <br/>
           Total de Gols <br/>
-          XX
+          <span className={classes.resultadoDestaque} >0</span>
         </div>
       </div>
         

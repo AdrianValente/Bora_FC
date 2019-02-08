@@ -13,7 +13,7 @@ import ListaJogos from './ListaJogos';
 
 function TabContainer(props) {
   return (
-    <Typography component="div" >
+    <Typography component="div">
       {props.children}
     </Typography>
   );
@@ -27,6 +27,7 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
   },
+ 
 });
 
 class AbasUsuario extends React.Component {
@@ -46,9 +47,9 @@ class AbasUsuario extends React.Component {
       <div className={classes.root}>
         <AppBar position="static">
           <Tabs fullWidth value={value} onChange={this.handleChange}>
-            <Tab label="Perfil do Jogador" classes="aba" />
-            <Tab label="Quadro de Avisos" classes="" />
-            <Tab label="Jogos" classes="" />
+            <Tab label="Perfil" />
+            <Tab label="Avisos" />
+            <Tab label="Jogos" />
           </Tabs>
         </AppBar>
         {value === 0 && <TabContainer>

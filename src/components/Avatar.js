@@ -8,10 +8,8 @@ import imgAvatarGroup from '../img/user_default.jpg';
 
 const styles = {
   avatar: {
-    margin: 10,
   },
   bigAvatar: {
-    margin: 10,
     width: 150,
     height: 150,
   },

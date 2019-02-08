@@ -6,11 +6,18 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Icon from '@material-ui/core/Icon';
 import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
   root: {
     width: '100%',
     backgroundColor: theme.palette.background.paper,
+  },
+  inline: {
+    display: 'inline',
+    fontWeight: 'bold',
+    fontSize: '1rem',
+    marginRight: '5px',
   },
 });
 
@@ -22,31 +29,71 @@ function EstatisticasUsuario(props) {
       <List >
         <ListItem>
             <Icon className={classes.icon}>games</Icon>
-            <ListItemText primary="100% Aproveitamento de Jogos" />
+            <ListItemText secondary={
+                                  <React.Fragment>
+                                    <Typography component="span" className={classes.inline} color="textPrimary">
+                                      100%
+                                    </Typography>
+                                    {' Aproveitamento de Jogos'}
+                                  </React.Fragment>
+                                  }
+              />
         </ListItem>
         <Divider />
 
         <ListItem >
             <Icon className={classes.icon}>games</Icon>
-            <ListItemText primary="0 Premiação de Melhores Jogadores" />
+            <ListItemText secondary={
+                                  <React.Fragment>
+                                    <Typography component="span" className={classes.inline} color="textPrimary">
+                                      0
+                                    </Typography>
+                                    {' Premiação de Melhores Jogadores'}
+                                  </React.Fragment>
+                                  }
+              /> 
         </ListItem>
         <Divider />
 
-        <ListItem>
+        <ListItem >
             <Icon className={classes.icon}>games</Icon>
-            <ListItemText primary="18 Premiação de Perna de Pal" />
+            <ListItemText secondary={
+                                  <React.Fragment>
+                                    <Typography component="span" className={classes.inline} color="textPrimary">
+                                      409
+                                    </Typography>
+                                    {' Premiação de Perna de Pal'}
+                                  </React.Fragment>
+                                  }
+              /> 
         </ListItem>
         <Divider />
 
-        <ListItem>
+        <ListItem >
             <Icon className={classes.icon}>games</Icon>
-            <ListItemText primary="0 Furão" />
+            <ListItemText secondary={
+                                  <React.Fragment>
+                                    <Typography component="span" className={classes.inline} color="textPrimary">
+                                      0
+                                    </Typography>
+                                    {' Furão'}
+                                  </React.Fragment>
+                                  }
+              /> 
         </ListItem>
         <Divider />
 
-        <ListItem>
+        <ListItem >
             <Icon className={classes.icon}>games</Icon>
-            <ListItemText primary="0 Saldo de Gols" />
+            <ListItemText secondary={
+                                  <React.Fragment>
+                                    <Typography component="span" className={classes.inline} color="textPrimary">
+                                      0%
+                                    </Typography>
+                                    {' Saldo de Gols'}
+                                  </React.Fragment>
+                                  }
+              /> 
         </ListItem>
 
       </List>

@@ -23,8 +23,8 @@ const styles = theme => ({
     margin: 5,
   },
   avatar: {
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 50,
   },
   button: {
     margin: 10,
@@ -38,8 +38,8 @@ const styles = theme => ({
   formatarCampos: {
     fontSize: 12,
   },
-  formatarDestaqueCampos: {
-    
+  formatarposicionamentoRodape: {
+    textAlign: 'center',
   },
 });
 
@@ -61,15 +61,14 @@ function AvaliableItens(props) {
               <Grid item xs={2}>
                 <Avatar className={classes.avatar} src={urlImagem} />
               </Grid>
-              <Grid item xs={6} className={classes.formatarCampos}>
+              <Grid item xs={10} className={classes.formatarCampos}>
                 Grupo: <b>{grupo}</b><br/>
                 Data: <b>{data}</b><br/>
                 Local: <b>{local}</b>
               </Grid>
-              <Grid item xs={4} >
+              <Grid item xs={12} className={classes.formatarposicionamentoRodape}>
                 <Button variant="contained" color="primary" className={classes.button}>
                   <Icon className={classes.extendedIcon}>send</Icon>Avaliar Jogo
-                  {/* This Button uses a Font Icon, see the installation instructions in the docs. */}
                 </Button>
               </Grid>
             </Grid>

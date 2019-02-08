@@ -16,9 +16,8 @@ const styles = {
     height: 150,
   },
   GroupAvatarHome: {
-    margin: 10,
-    width: 67,
-    height: 67,
+    width: '90%',
+    height: '90%',
   },
 };
 
@@ -26,7 +25,7 @@ function ImageAvatars(props) {
   const { classes } = props;
   return (
     <Grid container justify="center" alignItems="center">
-      <Avatar alt="Usuário" src={imgAvatarGroup} className={classes.GroupAvatarHome} />
+        <Avatar alt="Usuário" src={imgAvatarGroup} className={classes.GroupAvatarHome} />
     </Grid>
   );
 }

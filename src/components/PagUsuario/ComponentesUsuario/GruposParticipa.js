@@ -26,8 +26,6 @@ const styles = theme => ({
     color: theme.palette.text.secondary,
     whiteSpace: 'nowrap',
   },
-
-
 });
 
 function GruposParticipa(props) {
@@ -35,19 +33,19 @@ function GruposParticipa(props) {
 
   return (
     <div className={classes.containerGroup}>
-        <div style={{ gridColumnEnd: 'span 3' }}>
+        <div style={{ gridColumnEnd: 'span 4' }}>
           <ImageAvatarsGroups />
         </div>
-        <div style={{ gridColumnEnd: 'span 3', }} className="alignGridUser" >
+        <div style={{ gridColumnEnd: 'span 4', }} className="alignGridUser" >
           <ImageAvatarsGroups />
         </div>
-        <div style={{ gridColumnEnd: 'span 3' }} className="alignGridUser">
+        <div style={{ gridColumnEnd: 'span 4' }} className="alignGridUser">
           <ImageAvatarsGroups />
         </div>
-        <div style={{ gridColumnEnd: 'span 3' }} className="alignGridUser">
+        <div style={{ gridColumnEnd: 'span 4' }} className="alignGridUser">
           <ImageAvatarsGroups />
         </div>
-        <div style={{ gridColumnEnd: 'span 3' }} className="alignGridUser">
+        <div style={{ gridColumnEnd: 'span 4' }} className="alignGridUser">
           <ImageAvatarsGroups />
         </div>
     </div>

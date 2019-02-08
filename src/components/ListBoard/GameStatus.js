@@ -30,8 +30,8 @@ const styles = theme => ({
     margin: 5,
   },
   avatar: {
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 50,
   },
   button: {
     margin: 10,
@@ -45,12 +45,15 @@ const styles = theme => ({
   formatarCampos: {
     fontSize: 12,
   },
-
+  formatarposicionamentoRodape: {
+    justifyContent: 'space-between',
+    display: 'flex',
+    marginTop: '10px',
+  },
 });
 
 const grupo = `Tabajara Futebol Clube`;
 const data = `14/12/2018 as 15:30h`;
-const local = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut dignissim est.`;
 
 function GameStatus(props) {
   const { classes } = props;
@@ -62,22 +65,19 @@ function GameStatus(props) {
 
           <Paper item xs={12} className={classes.paper}>
 
-            <Grid container wrap="nowrap" spacing={0}>
+            <Grid container spacing={0}>
               <Grid item xs={2}>
                 <Avatar className={classes.avatar} src={urlImagem} />
               </Grid>
-              <Grid item xs={6} className={classes.formatarCampos}>
+              <Grid item xs={10} className={classes.formatarCampos}>
                 Grupo: <b>{grupo}</b><br/>
                 Data: <b>{data}</b><br/>
-                Local: <b>{local}</b>
               </Grid>
-              <Grid item xs={4} className="warpConteinerStatus" >          
+              <Grid item xs={12} wrap="nowrap" className={classes.formatarposicionamentoRodape}>     
                 <SpotlightPlayer /> 
                 <ItemCardStatus />
-
                 <ItemPosicionGame /> 
-                <GolsNumber />               
-
+                <GolsNumber />
                 <ItemPainelStatusSpecial />               
               </Grid>
             </Grid>

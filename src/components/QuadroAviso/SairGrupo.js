@@ -21,8 +21,8 @@ const styles = theme => ({
     margin: 5,
   },
   avatar: {
-    width: 40,
-    height: 40,
+    width: 50,
+    height: 50,
   },
   extendedIcon: {
     marginRight: theme.spacing.unit,
