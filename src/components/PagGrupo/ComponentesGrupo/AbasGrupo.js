@@ -45,7 +45,7 @@ class TabGroup extends React.Component {
         <AppBar position="static">
           <Tabs fullWidth value={value} onChange={this.handleChange}>
             <Tab label="Participantes" />
-            <Tab label="Jogos" />
+            <Tab label="Jogos Realizados" />
           </Tabs>
         </AppBar>
         {value === 0 && <TabContainer>

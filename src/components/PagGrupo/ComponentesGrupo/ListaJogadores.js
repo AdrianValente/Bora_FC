@@ -31,37 +31,37 @@ function ListPlayers(props) {
           <InformacoesGrupo quantidadetotal={'21'} jogadorconfirmado={'8'} jogadorhabilitados={'12'} />
         </Grid>
 
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <UserOfGroup />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <UserOfGroup />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <UserOfGroup />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <UserOfGroup />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <UserOfGroup />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <UserOfGroup />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <UserOfGroup />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <UserOfGroup />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <UserOfGroup />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <UserOfGroup />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <UserOfGroup />
         </Grid>
       </Grid>
