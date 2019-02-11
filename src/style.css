@@ -148,3 +148,15 @@ code {
 .cancelado .cancelado, .realizado .realizado, .fim .fim {
   display: inherit;
 }
+
+.cancelado, .fim {
+  color: #af3941;
+}
+
+.realizado {
+  color: #213152;
+}
+
+.react-rater-star.is-active {
+  color: #bb8628 !important;
+}

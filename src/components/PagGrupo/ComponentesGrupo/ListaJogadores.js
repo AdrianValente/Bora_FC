@@ -1,27 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-import UserOfGroup from '../../ListBoard/UserOfGroup';
 import InformacoesGrupo from '../../InformacoesGrupo';
+import ParticipantesGrupo from '../../ListBoard/participantesGrupo';
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
-  },
-  paper: {
-    padding: theme.spacing.unit * 2,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
   },
   espacamentoContent: {
     padding: '15px 10px 70px 10px',
   }
 });
 
-function ListPlayers(props) {
+function ListaJogadores(props) {
   const { classes } = props;
 
   return (
@@ -31,46 +25,20 @@ function ListPlayers(props) {
           <InformacoesGrupo quantidadetotal={'21'} jogadorconfirmado={'8'} jogadorhabilitados={'12'} />
         </Grid>
 
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
-        <Grid item xs={12}>
-          <UserOfGroup />
-        </Grid>
+        <ParticipantesGrupo nome={'Adrian Valente'} posicao={'Artilheiro'} admin={'Admin'} />
+        <ParticipantesGrupo nome={'Pé de Pano'} posicao={'Zagueiro'} admin={''}/>
+        <ParticipantesGrupo nome={'Jãozinho'} posicao={'Meio Campista'} admin={''} />
+        <ParticipantesGrupo nome={'Bola 7'} posicao={'Goleiro'} admin={''}/>
+        <ParticipantesGrupo nome={'Scobar'} posicao={'Artilheiro'} admin={'Admin'} />
+        <ParticipantesGrupo nome={'Mulinha'} posicao={'Churrasqueiro'} admin={''} />
+
       </Grid>
     </div>
   );
 }
 
-ListPlayers.propTypes = {
+ListaJogadores.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ListPlayers);
+export default withStyles(styles)(ListaJogadores);

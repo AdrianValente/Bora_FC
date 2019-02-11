@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-import UserPlay from '../../ListBoard/UserPlay';
+import InformacoesJogosRealizados from '../../ListBoard/InformacoesJogosRealizados';
 import InformacoesGrupo from '../../InformacoesGrupo';
 
 const styles = theme => ({
@@ -21,7 +21,7 @@ const styles = theme => ({
   }
 });
 
-function ListGames(props) {
+function ListJogos(props) {
   const { classes } = props;
 
   return (
@@ -32,7 +32,7 @@ function ListGames(props) {
         </Grid>
 
         <Grid item xs={12}>
-          <UserPlay  quantidadetotal={'20/07/2019'} />
+          <InformacoesJogosRealizados quantidadetotal={'20/07/2019'} />
         </Grid>
         
       </Grid>
@@ -40,8 +40,8 @@ function ListGames(props) {
   );
 }
 
-ListGames.propTypes = {
+ListJogos.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ListGames);
+export default withStyles(styles)(ListJogos);

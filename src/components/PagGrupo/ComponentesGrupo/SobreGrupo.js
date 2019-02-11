@@ -34,10 +34,25 @@ const styles = theme => ({
     gridGap: `${theme.spacing.unit * 1}px`,
     whidth: '100%',
   },
-
+  destaqueNomeGrupo: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  complementoIdGrupo: {
+    fontSize: 12,
+  },
+  alinharPosicaoSobre: {
+    padding: '10px 15px',
+    fontSize: 13,
+  },
+  alignGridGroup: {
+    direction: 'column',
+    padding: '10px 0',
+    lineHeight: '22px',
+  }  
 });
 
-function AboutGroup(props) {
+function SobreGrupo(props) {
   const { classes } = props;
 
   return (
@@ -47,9 +62,9 @@ function AboutGroup(props) {
         <div style={{ gridColumnEnd: 'span 4' }}>
             <Avatar nome={'Usuário 01'}  />
         </div>
-        <div style={{ gridColumnEnd: 'span 8', }} className="alignGridGroup" >
-            Nome do Grupo ID:#123456 <br/>
-            35 jogos Realizados <br/>
+        <div style={{ gridColumnEnd: 'span 8', }} className={classes.alinharPosicaoSobre} alignItems="center" >
+            <span className={classes.destaqueNomeGrupo} >Nome do Grupo</span> <span className={classes.complementoIdGrupo}> ID:#123456</span><br/>
+            35 jogos Realizados 
             <BtnEditarGrupo />
         </div>
 
@@ -57,8 +72,8 @@ function AboutGroup(props) {
 
        <div className={classes.containerList}>
         <Paper className={classes.paper} style={{ gridColumnEnd: 'span 12' }}>
-            <div style={{ gridColumnEnd: 'span 12', }}  >
-            Sobre o grupo
+            <div style={{ gridColumnEnd: 'span 12', }} className={classes.alinharPosicaoSobre} >
+              Sobre o grupo - Texto livre para o administrador escrever as regras do grupo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus velit et vehicula faucibus. Maecenas ante massa, aliquet eget vulputate vitae, varius quis purus. Ut eget eros neque. Phasellus pulvinar maximus nulla, quis accumsan leo ultrices id. Mauris tempor nisl tortor, sed facilisis tellus consectetur quis. Phasellus eu purus nisl. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec malesuada felis. Integer aliquam scelerisque suscipit.
             </div>
         </Paper>
        </div>
@@ -67,8 +82,8 @@ function AboutGroup(props) {
   );
 }
 
-AboutGroup.propTypes = {
+SobreGrupo.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(AboutGroup);
+export default withStyles(styles)(SobreGrupo);

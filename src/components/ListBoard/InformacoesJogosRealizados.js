@@ -7,8 +7,10 @@ import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
+import Rater from 'react-rater'
+import 'react-rater/lib/react-rater.css'
 
-import SpotlightPlayer from '../ItemPanelStatus/SpotlightPlayer';
+import InfoTextual from '../ItemPanelStatus/TextItem';
 
 import urlImagem from '../../img/group_default.jpg';
 
@@ -38,8 +40,10 @@ const styles = theme => ({
     marginRight: theme.spacing.unit,
     fontSize: 15,
   },
-  formatarCampos: {
-    fontSize: 12,
+  formatarCampoRating: {
+    fontSize: 35,
+    marginTop: '-15px',
+
   },
   dataJogo: {
     fontSize: 14,
@@ -57,17 +61,21 @@ function UserPlay(props) {
     <div className={classes.root}>
       <Grid spacing={0} xs={12}>
         <Paper item xs={12} className={classes.paper}>
-          <Grid container wrap="nowrap"  alignItems="center" justifyContent="flex-between" spacing={0}>
+          <Grid container alignItems="center" justifyContent="flex-between" spacing={0}>
 
-              <Grid item xs={2}>
-                <span className={classes.dataJogo}>{data}</span>
+              <Grid item xs={5}>
+                Data:<span className={classes.dataJogo}>{data}</span>
               </Grid>              
-              <Grid item xs={6} className="warpConteinerStatus" >          
-                <SpotlightPlayer />                              
+              <Grid item xs={7} container justifyContent="flex-end" className={classes.formatarCampoRating}>
+                <Rater total={5} rating={5} interactive={true} />
               </Grid>
-              <Grid item xs={4} className={classes.formatarCampos}>
-                Avaliação Geral do Jogo:
-                <br/>estrelinhas
+
+              <Grid item xs={12} container justifyContent="flex-between" >          
+                <InfoTextual label={'Jog'} numero={'12'}/> 
+                <InfoTextual label={'Times'} numero={'3'}/> 
+                <InfoTextual label={'Destaque'} numero={'0'}/>   
+                <InfoTextual label={'Gols'} numero={'7'}/>  
+                <InfoTextual label={'Cartõe'} numero={'0'}/>                               
               </Grid>
 
             </Grid>

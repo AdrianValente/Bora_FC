@@ -27,13 +27,13 @@ const styles = theme => ({
     height: 50,
   },
   button: {
-    margin: 10,
-    fontSize: 10,
-    padding: 5,
+    margin: 5,
+    fontSize: 12,
+    padding: '5px 15px 5px 10px',
   },
   extendedIcon: {
-    marginRight: theme.spacing.unit,
-    fontSize: 15,
+    marginRight: 4,
+    fontSize: 20,
   },
   formatarCampos: {
     fontSize: 12,
@@ -65,7 +65,7 @@ function AvaliarJogo(props) {
             
               <Grid item xs={12} className={classes.formatarposicionamentoRodape}>
                   <Button variant="contained" color="primary" className={classes.button}>
-                    <Icon className={classes.extendedIcon}>send</Icon>Avaliar Jogo
+                    <Icon className={classes.extendedIcon}>stars</Icon>Avaliar Jogo
                   </Button>
               </Grid>
             </Grid>

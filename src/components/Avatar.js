@@ -10,8 +10,9 @@ const styles = {
   avatar: {
   },
   bigAvatar: {
-    width: 150,
-    height: 150,
+    width: 100,
+    height: 100,
+    margin: 15,
   },
 };
 

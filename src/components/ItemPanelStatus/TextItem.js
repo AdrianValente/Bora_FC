@@ -1,9 +1,9 @@
 import React from 'react'
 
-const TextItem = ({label, information}) => (
+const TextItem = ({label, numero}) => (
     <div className='painel_status border_painel_default' >
-        <span className="title_painel_special_status">Colocação</span>
-        <span className="position_Game_play">2º</span> 
+        <span className="title_painel_special_status">{label}</span>
+        <span className="position_Game_play">{numero}</span> 
     </div>
 )
 

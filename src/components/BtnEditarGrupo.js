@@ -6,6 +6,8 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
+import Icon from '@material-ui/core/Icon';
+import Typography from '@material-ui/core/Typography';
 
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
@@ -28,8 +30,6 @@ class BtnEditarGrupo extends React.Component {
   handleClose = () => {
     this.setState({ open: false });
   };
-
-  
 
   render() {
     return (

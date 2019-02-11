@@ -27,13 +27,13 @@ const styles = theme => ({
     height: 50,
   },
   button: {
-    margin: 10,
-    fontSize: 10,
-    padding: 5,
+    margin: 5,
+    fontSize: 12,
+    padding: '5px 15px 5px 10px',
   },
   extendedIcon: {
-    marginRight: theme.spacing.unit,
-    fontSize: 15,
+    marginRight: 4,
+    fontSize: 20,
   },
   formatarCampos: {
     fontSize: 12,
@@ -65,10 +65,10 @@ function ConfirmacaoJogo(props) {
 
               <Grid item xs={12} className={classes.formatarposicionamentoRodape}>
                 <Button variant="contained" color="secundary" className={classes.button} >
-                      <Icon className={classes.extendedIcon}>send</Icon>To Fora
+                      <Icon className={classes.extendedIcon}>thumb_up</Icon>To Fora
                 </Button>
                 <Button variant="contained" color="primary" className={classes.button} >
-                      <Icon className={classes.extendedIcon}>send</Icon>To Dentro
+                      <Icon className={classes.extendedIcon}>thumb_down</Icon>To Dentro
                 </Button>
               </Grid>
             </Grid>
