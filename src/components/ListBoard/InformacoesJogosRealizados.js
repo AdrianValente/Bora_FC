@@ -11,8 +11,9 @@ import Rater from 'react-rater'
 import 'react-rater/lib/react-rater.css'
 
 import InfoTextual from '../ItemPanelStatus/TextItem';
+import ImagemItem from '../ItemPanelStatus/ImagemItem';
 
-import urlImagem from '../../img/group_default.jpg';
+import Destaque from '../../img/user_default.jpg';
 
 const styles = theme => ({
   root: {
@@ -71,9 +72,9 @@ function UserPlay(props) {
               </Grid>
 
               <Grid item xs={12} container justifyContent="flex-between" >          
-                <InfoTextual label={'Jog'} numero={'12'}/> 
+                <InfoTextual label={'Jogadores'} numero={'12'}/> 
                 <InfoTextual label={'Times'} numero={'3'}/> 
-                <InfoTextual label={'Destaque'} numero={'0'}/>   
+                <ImagemItem label={'Destaque'} urlImagem={Destaque}/>   
                 <InfoTextual label={'Gols'} numero={'7'}/>  
                 <InfoTextual label={'Cartõe'} numero={'0'}/>                               
               </Grid>
