@@ -81,8 +81,16 @@ code {
   vertical-align: middle;
 }
 
+.tamanho_100porcento {
+  width: 100%;
+}
+
 .avatar {
   margin: 10,
+}
+
+.estofamentoLista {
+  padding: 10px 5px;
 }
 
 .border_painel_default {
