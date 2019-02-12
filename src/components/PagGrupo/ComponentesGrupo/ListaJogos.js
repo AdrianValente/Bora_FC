@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 
 import InformacoesJogosRealizados from '../../ListBoard/InformacoesJogosRealizados';
 import InformacoesGrupo from '../../InformacoesGrupo';
+import SeparacaoData from '../../SeparadorItemData';
 
 const styles = theme => ({
   root: {
@@ -27,14 +28,15 @@ function ListJogos(props) {
   return (
     <div className={classes.root}>
       <Grid container spacing={16} className={classes.espacamentoContent}>
-        <Grid item xs={12}>
-          <InformacoesGrupo quantidadetotal={'21'} jogadorconfirmado={'8'} jogadorhabilitados={'12'} />
-        </Grid>
 
-        <Grid item xs={12}>
-          <InformacoesJogosRealizados quantidadetotal={'20/07/2019'} />
-        </Grid>
-        
+        <InformacoesJogosRealizados data={'06/07/2019'} jogadores={'12'} times={'3'} gols={'07'} cartoes={'0'} />
+        <SeparacaoData date={'Julho 2018'} />
+
+        <InformacoesJogosRealizados data={'22/06/2019'} jogadores={'32'} times={'4'} gols={'30'} cartoes={'8'} />
+        <InformacoesJogosRealizados data={'15/06/2019'} jogadores={'10'} times={'2'} gols={'05'} cartoes={'1'} />
+        <InformacoesJogosRealizados data={'08/06/2019'} jogadores={'12'} times={'3'} gols={'07'} cartoes={'0'} />
+        <SeparacaoData date={'Junho 2018'} />
+
       </Grid>
     </div>
   );

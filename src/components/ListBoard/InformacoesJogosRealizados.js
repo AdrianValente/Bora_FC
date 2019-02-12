@@ -50,16 +50,18 @@ const styles = theme => ({
     fontSize: 14,
     fontWeight: 'bold',
   },
+  alinhamentoPaineis: {
+    justifyContent: 'space-between',
+  }
 
 });
 
 const data = `14/12/2018`;
 
 function UserPlay(props) {
-  const { classes } = props;
+  const { classes, data, jogadores, times, gols, cartoes } = props;
 
   return (
-    <div className={classes.root}>
       <Grid spacing={0} xs={12}>
         <Paper item xs={12} className={classes.paper}>
           <Grid container alignItems="center" justifyContent="flex-between" spacing={0}>
@@ -71,18 +73,17 @@ function UserPlay(props) {
                 <Rater total={5} rating={5} interactive={true} />
               </Grid>
 
-              <Grid item xs={12} container justifyContent="flex-between" >          
-                <InfoTextual label={'Jogadores'} numero={'12'}/> 
-                <InfoTextual label={'Times'} numero={'3'}/> 
+              <Grid xs={12}  container justifyContent="flex-between" className={classes.alinhamentoPaineis} >          
+                <InfoTextual label={'Jogadores'} numero={jogadores}/> 
+                <InfoTextual label={'Times'} numero={times}/> 
                 <ImagemItem label={'Destaque'} urlImagem={Destaque}/>   
-                <InfoTextual label={'Gols'} numero={'7'}/>  
-                <InfoTextual label={'Cartõe'} numero={'0'}/>                               
+                <InfoTextual label={'Gols'} numero={gols}/>  
+                <InfoTextual label={'Cartõe'} numero={cartoes}/>                               
               </Grid>
 
             </Grid>
         </Paper>          
       </Grid>
-    </div>
   );
 }
 
